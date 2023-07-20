@@ -3,7 +3,7 @@ import './App.css';
 import { 
   createBrowserRouter,
   RouterProvider,
-  Route,
+  
 } from "react-router-dom";
 
 import PaginaNoticias from './Pages/PaginaBuscador';

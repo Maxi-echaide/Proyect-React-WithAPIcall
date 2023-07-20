@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+
 import { Container } from "@mui/system"
 import { useState } from "react"
 import { useEffect } from "react";
@@ -18,11 +18,11 @@ const PaginaNoticias = () => {
     const [pagina, setPagina] = useState(1);
     const [searchParams, setSearchParams] = useSearchParams();
 
-   useEffect(()=>{
+    useEffect(()=>{
         if(searchParams.get("query")){
             buscarNoticia(pagina)
         }
-   },[searchParams,pagina])
+    },[searchParams,pagina])
 
 
     const buscarNoticia = async () => {
@@ -31,7 +31,7 @@ const PaginaNoticias = () => {
         
         setNoticias(notis);
         setCantidadPaginas(Math.ceil(parseInt(totalResults)/10))
-        console.log(notis)
+        
         setIsLoading(false);
     }
 
